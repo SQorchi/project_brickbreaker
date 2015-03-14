@@ -1,0 +1,46 @@
+\contentsline {chapter}{\numberline {1}Hierarchical Index}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Class Hierarchy}{1}{section.1.1}
+\contentsline {chapter}{\numberline {2}Class Index}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Class List}{3}{section.2.1}
+\contentsline {chapter}{\numberline {3}Class Documentation}{5}{chapter.3}
+\contentsline {section}{\numberline {3.1}bloc Struct Reference}{5}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Detailed Description}{5}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Constructor \& Destructor Documentation}{5}{subsection.3.1.2}
+\contentsline {subsubsection}{\numberline {3.1.2.1}bloc}{5}{subsubsection.3.1.2.1}
+\contentsline {subsection}{\numberline {3.1.3}Member Function Documentation}{6}{subsection.3.1.3}
+\contentsline {subsubsection}{\numberline {3.1.3.1}est\discretionary {-}{}{}Toucher}{6}{subsubsection.3.1.3.1}
+\contentsline {subsubsection}{\numberline {3.1.3.2}operator==}{6}{subsubsection.3.1.3.2}
+\contentsline {subsection}{\numberline {3.1.4}Member Data Documentation}{6}{subsection.3.1.4}
+\contentsline {subsubsection}{\numberline {3.1.4.1}bas\discretionary {-}{}{}\_\discretionary {-}{}{}gauche}{6}{subsubsection.3.1.4.1}
+\contentsline {subsubsection}{\numberline {3.1.4.2}L}{6}{subsubsection.3.1.4.2}
+\contentsline {section}{\numberline {3.2}cibles Struct Reference}{7}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Constructor \& Destructor Documentation}{7}{subsection.3.2.1}
+\contentsline {subsubsection}{\numberline {3.2.1.1}cibles}{7}{subsubsection.3.2.1.1}
+\contentsline {section}{\numberline {3.3}circle Struct Reference}{7}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Detailed Description}{8}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Constructor \& Destructor Documentation}{8}{subsection.3.3.2}
+\contentsline {subsubsection}{\numberline {3.3.2.1}circle}{8}{subsubsection.3.3.2.1}
+\contentsline {subsubsection}{\numberline {3.3.2.2}circle}{8}{subsubsection.3.3.2.2}
+\contentsline {subsection}{\numberline {3.3.3}Member Data Documentation}{8}{subsection.3.3.3}
+\contentsline {subsubsection}{\numberline {3.3.3.1}center}{8}{subsubsection.3.3.3.1}
+\contentsline {subsubsection}{\numberline {3.3.3.2}radius}{8}{subsubsection.3.3.3.2}
+\contentsline {section}{\numberline {3.4}render\discretionary {-}{}{}\_\discretionary {-}{}{}area Class Reference}{8}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Member Function Documentation}{9}{subsection.3.4.1}
+\contentsline {subsubsection}{\numberline {3.4.1.1}change\discretionary {-}{}{}\_\discretionary {-}{}{}draw\discretionary {-}{}{}\_\discretionary {-}{}{}circle\discretionary {-}{}{}\_\discretionary {-}{}{}state}{9}{subsubsection.3.4.1.1}
+\contentsline {subsubsection}{\numberline {3.4.1.2}mouse\discretionary {-}{}{}Move\discretionary {-}{}{}Event}{9}{subsubsection.3.4.1.2}
+\contentsline {subsubsection}{\numberline {3.4.1.3}mouse\discretionary {-}{}{}Press\discretionary {-}{}{}Event}{9}{subsubsection.3.4.1.3}
+\contentsline {subsubsection}{\numberline {3.4.1.4}mouse\discretionary {-}{}{}Release\discretionary {-}{}{}Event}{9}{subsubsection.3.4.1.4}
+\contentsline {subsubsection}{\numberline {3.4.1.5}paint\discretionary {-}{}{}Event}{9}{subsubsection.3.4.1.5}
+\contentsline {subsubsection}{\numberline {3.4.1.6}set\discretionary {-}{}{}\_\discretionary {-}{}{}bounce\discretionary {-}{}{}\_\discretionary {-}{}{}coeff}{9}{subsubsection.3.4.1.6}
+\contentsline {subsubsection}{\numberline {3.4.1.7}set\discretionary {-}{}{}\_\discretionary {-}{}{}damping}{9}{subsubsection.3.4.1.7}
+\contentsline {subsubsection}{\numberline {3.4.1.8}setup\discretionary {-}{}{}\_\discretionary {-}{}{}bounce\discretionary {-}{}{}\_\discretionary {-}{}{}number}{9}{subsubsection.3.4.1.8}
+\contentsline {section}{\numberline {3.5}vec2 Struct Reference}{9}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Detailed Description}{10}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}Constructor \& Destructor Documentation}{10}{subsection.3.5.2}
+\contentsline {subsubsection}{\numberline {3.5.2.1}vec2}{10}{subsubsection.3.5.2.1}
+\contentsline {subsubsection}{\numberline {3.5.2.2}vec2}{10}{subsubsection.3.5.2.2}
+\contentsline {subsection}{\numberline {3.5.3}Member Data Documentation}{10}{subsection.3.5.3}
+\contentsline {subsubsection}{\numberline {3.5.3.1}x}{10}{subsubsection.3.5.3.1}
+\contentsline {subsubsection}{\numberline {3.5.3.2}y}{10}{subsubsection.3.5.3.2}
+\contentsline {section}{\numberline {3.6}window Class Reference}{10}{section.3.6}
+\contentsline {subsection}{\numberline {3.6.1}Detailed Description}{11}{subsection.3.6.1}
