@@ -2,6 +2,7 @@
 #define CIBLES_HPP
 #include"bloc.hpp"
 #include<list>
+#include<QWidget>
 struct cibles
 {
     cibles();
@@ -11,7 +12,7 @@ struct cibles
      * @param nombreLignes
      *Constructeur des cibles crée N cibles repartient sur nombreLignes
      */
-    cibles(int N,int nombreLignes);
+    cibles(int N,int nombreLignes,QWidget zone_de_jeu);
     int nombreCibles;
     std::list<bloc> briques;
     void gestionCollision(circle const& balle);

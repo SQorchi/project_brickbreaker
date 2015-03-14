@@ -2,6 +2,9 @@
 #define BLOC_HPP
 #include"vec2.hpp"
 #include"circle.hpp"
+#include<QSizeF>
+#include<QPointF>
+#include<QRectF>
 /**
  * @brief The bloc struct
  */
@@ -15,16 +18,19 @@ struct bloc
      * @param Hauteur
      * Constructeur d'un bloc
      */
-    bloc(vec2 origine,float Longeur,float Hauteur);
-    /** Origine du bloc (en bas à gauche)*/
-    vec2 bas_gauche;
+    bloc(float origine_x,float origine_y,float Longeur,float Hauteur);
+    /** Origine du bloc (en haut à gauche)*/
+    QPointF haut_gauche;
     /** L=largeur H=hauteur*/
     float L,H;
+    QSizeF taille;
+    QRectF rectangle;
+
     /**
-/**     * @brief estToucher
-/**     * @param balle
-/**     * @return
-/**     */
+@brief estToucher
+@param balle
+@return
+**/
     bool estToucher(circle const& balle);
     /**
      * @brief operator ==

@@ -4,30 +4,34 @@
 bloc::bloc()
 {
 }
-bloc::bloc(vec2 origine,float Longeur,float Hauteur):bas_gauche(origine),L(Longeur),H(Hauteur){}
+bloc::bloc(float origine_x, float origine_y, float Longeur, float Hauteur):H(Hauteur),L(Longeur),haut_gauche(origine_x,origine_y),taille(L,H),rectangle(haut_gauche,taille){
+}
 /**
-/** * @brief bloc::estToucher
-/** * @param balle
-/** * @return
- *permet de determiné si le bloc a été toucher par la balle
-/** */
+@brief bloc::estToucher
+@param balle
+@return
+*permet de determiné si le bloc a été toucher par la balle
+**/
 bool bloc::estToucher(const circle &balle)
 {
-    for(int i=0;i<L;i++){
-        for(int j=0;j<H;j++){
-            vec2 temp(this->bas_gauche.x+i,this->bas_gauche.y+j);
+    float i=0;
+    float j=0;
+    float increment=0.01;
+    do{
+        vec2 temp(this->haut_gauche.x()+i,this->haut_gauche.y()-j);
             if(point_inside_circle(temp,balle))
             {
                 return true;
             }
-        }
-    }
+            i+=increment;
+            j+=increment;
+    }while(i!=L&&j!=H);
+
     return false;
 }
 bool bloc::operator ==(bloc const& A)
 {
-    if(this->bas_gauche.x==A.bas_gauche.x&&this->bas_gauche.y==A.bas_gauche.y){
-        if(this->H==A.H&&this->L==A.L)
+    if(this->rectangle==A.rectangle){
             return true;
     }
 
