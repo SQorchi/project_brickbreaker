@@ -2,19 +2,32 @@
 #define CIBLES_HPP
 #include"bloc.hpp"
 #include<list>
-#include<QWidget>
+#include<QSizeF>
+/**
+ * @brief The cibles struct
+ */
 struct cibles
 {
+    /**
+     * @brief cibles
+     */
     cibles();
     /**
      * @brief cibles
      * @param N
      * @param nombreLignes
-     *Constructeur des cibles crée N cibles repartient sur nombreLignes
+     * @param zone_de_jeu
      */
-    cibles(int N,int nombreLignes,QWidget zone_de_jeu);
+    cibles(int N, int nombreLignes, QSizeF const& taille);
+    /**
+     * @brief nombreCibles
+     */
     int nombreCibles;
     std::list<bloc> briques;
+    /**
+     * @brief gestionCollision
+     * @param balle
+     */
     void gestionCollision(circle const& balle);
 };
 

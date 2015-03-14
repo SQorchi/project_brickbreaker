@@ -13,20 +13,26 @@ The bloc struct.
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{structbloc_a2a5a4e418a9decebe5b7f30df71af385}{bloc} (\hyperlink{structvec2}{vec2} origine, float Longeur, float Hauteur)
+\hyperlink{structbloc_a022f138ba1573e51ea489e9d2d9343af}{bloc} (float origine\-\_\-x, float origine\-\_\-y, float Longeur, float Hauteur)
 \begin{DoxyCompactList}\small\item\em bloc \end{DoxyCompactList}\item 
 bool \hyperlink{structbloc_a51aa6ddde5ddfec73ab1ac6004a1e09c}{est\-Toucher} (\hyperlink{structcircle}{circle} const \&balle)
-\begin{DoxyCompactList}\small\item\em est\-Toucher /$\ast$$\ast$ $\ast$ \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em est\-Toucher \end{DoxyCompactList}\item 
 bool \hyperlink{structbloc_a731b8b1d5fe6c1cf9e0edcc5c5cccc1b}{operator==} (\hyperlink{structbloc}{bloc} const \&A)
 \begin{DoxyCompactList}\small\item\em operator == \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{structvec2}{vec2} \hyperlink{structbloc_a66f43d85d906eae25ff2bd055704ec76}{bas\-\_\-gauche}
+Q\-Point\-F \hyperlink{structbloc_a2fc10cb754a223b8b3d5bc73cddc7696}{haut\-\_\-gauche}
 \item 
 float \hyperlink{structbloc_a952b25540dde128110d4c1046656cb5e}{L}
 \item 
 \hypertarget{structbloc_a59981ef09d24dcf015f480c3e4318eef}{float {\bfseries H}}\label{structbloc_a59981ef09d24dcf015f480c3e4318eef}
+
+\item 
+\hypertarget{structbloc_a5544a11010c7abf27df801f7b7551072}{Q\-Size\-F {\bfseries taille}}\label{structbloc_a5544a11010c7abf27df801f7b7551072}
+
+\item 
+\hypertarget{structbloc_aca18e24edbaf1c79d5d04986afb7e3e8}{Q\-Rect\-F {\bfseries rectangle}}\label{structbloc_aca18e24edbaf1c79d5d04986afb7e3e8}
 
 \end{DoxyCompactItemize}
 
@@ -35,26 +41,29 @@ float \hyperlink{structbloc_a952b25540dde128110d4c1046656cb5e}{L}
 The bloc struct. 
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{structbloc_a2a5a4e418a9decebe5b7f30df71af385}{\index{bloc@{bloc}!bloc@{bloc}}
+\hypertarget{structbloc_a022f138ba1573e51ea489e9d2d9343af}{\index{bloc@{bloc}!bloc@{bloc}}
 \index{bloc@{bloc}!bloc@{bloc}}
 \subsubsection[{bloc}]{\setlength{\rightskip}{0pt plus 5cm}bloc\-::bloc (
 \begin{DoxyParamCaption}
-\item[{{\bf vec2}}]{origine, }
+\item[{float}]{origine\-\_\-x, }
+\item[{float}]{origine\-\_\-y, }
 \item[{float}]{Longeur, }
 \item[{float}]{Hauteur}
 \end{DoxyParamCaption}
-)}}\label{structbloc_a2a5a4e418a9decebe5b7f30df71af385}
+)}}\label{structbloc_a022f138ba1573e51ea489e9d2d9343af}
 
 
 bloc 
 
 
 \begin{DoxyParams}{Parameters}
-{\em origine} & \\
+{\em origine\-\_\-x} & \\
+\hline
+{\em origine\-\_\-y} & \\
 \hline
 {\em Longeur} & \\
 \hline
-{\em Hauteur} & Constructeur d'un bloc \\
+{\em Hauteur} & \\
 \hline
 \end{DoxyParams}
 
@@ -69,25 +78,25 @@ bloc
 )}}\label{structbloc_a51aa6ddde5ddfec73ab1ac6004a1e09c}
 
 
-est\-Toucher /$\ast$$\ast$ $\ast$ 
+est\-Toucher 
 
-\hyperlink{structbloc_a51aa6ddde5ddfec73ab1ac6004a1e09c}{bloc\-::est\-Toucher} /$\ast$$\ast$ $\ast$
+\hyperlink{structbloc_a51aa6ddde5ddfec73ab1ac6004a1e09c}{bloc\-::est\-Toucher}
 
-/$\ast$$\ast$ $\ast$ 
+
 \begin{DoxyParams}{Parameters}
-{\em balle} & /$\ast$$\ast$ $\ast$ \\
+{\em balle} & \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-/$\ast$$\ast$
+
 \end{DoxyReturn}
-/$\ast$$\ast$ $\ast$ 
+
 \begin{DoxyParams}{Parameters}
-{\em balle} & /$\ast$$\ast$ $\ast$ \\
+{\em balle} & \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-permet de determiné si le bloc a été toucher par la balle /$\ast$$\ast$ 
+permet de determiné si le bloc a été toucher par la balle 
 \end{DoxyReturn}
 \hypertarget{structbloc_a731b8b1d5fe6c1cf9e0edcc5c5cccc1b}{\index{bloc@{bloc}!operator==@{operator==}}
 \index{operator==@{operator==}!bloc@{bloc}}
@@ -111,10 +120,10 @@ operator ==
 
 
 \subsection{Member Data Documentation}
-\hypertarget{structbloc_a66f43d85d906eae25ff2bd055704ec76}{\index{bloc@{bloc}!bas\-\_\-gauche@{bas\-\_\-gauche}}
-\index{bas\-\_\-gauche@{bas\-\_\-gauche}!bloc@{bloc}}
-\subsubsection[{bas\-\_\-gauche}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec2} bloc\-::bas\-\_\-gauche}}\label{structbloc_a66f43d85d906eae25ff2bd055704ec76}
-Origine du bloc (en bas à gauche) \hypertarget{structbloc_a952b25540dde128110d4c1046656cb5e}{\index{bloc@{bloc}!L@{L}}
+\hypertarget{structbloc_a2fc10cb754a223b8b3d5bc73cddc7696}{\index{bloc@{bloc}!haut\-\_\-gauche@{haut\-\_\-gauche}}
+\index{haut\-\_\-gauche@{haut\-\_\-gauche}!bloc@{bloc}}
+\subsubsection[{haut\-\_\-gauche}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Point\-F bloc\-::haut\-\_\-gauche}}\label{structbloc_a2fc10cb754a223b8b3d5bc73cddc7696}
+Origine du bloc (en haut à gauche) \hypertarget{structbloc_a952b25540dde128110d4c1046656cb5e}{\index{bloc@{bloc}!L@{L}}
 \index{L@{L}!bloc@{bloc}}
 \subsubsection[{L}]{\setlength{\rightskip}{0pt plus 5cm}float bloc\-::\-L}}\label{structbloc_a952b25540dde128110d4c1046656cb5e}
 L=largeur H=hauteur 

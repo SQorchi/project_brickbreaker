@@ -37,6 +37,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -70,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -88,13 +89,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <p>This is the complete list of members for <a class="el" href="structbloc.html">bloc</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="structbloc.html#a66f43d85d906eae25ff2bd055704ec76">bas_gauche</a></td><td class="entry"><a class="el" href="structbloc.html">bloc</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>bloc</b>() (defined in <a class="el" href="structbloc.html">bloc</a>)</td><td class="entry"><a class="el" href="structbloc.html">bloc</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="structbloc.html#a2a5a4e418a9decebe5b7f30df71af385">bloc</a>(vec2 origine, float Longeur, float Hauteur)</td><td class="entry"><a class="el" href="structbloc.html">bloc</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="structbloc.html#a51aa6ddde5ddfec73ab1ac6004a1e09c">estToucher</a>(circle const &amp;balle)</td><td class="entry"><a class="el" href="structbloc.html">bloc</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>H</b> (defined in <a class="el" href="structbloc.html">bloc</a>)</td><td class="entry"><a class="el" href="structbloc.html">bloc</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>bloc</b>() (defined in <a class="el" href="structbloc.html">bloc</a>)</td><td class="entry"><a class="el" href="structbloc.html">bloc</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="structbloc.html#a022f138ba1573e51ea489e9d2d9343af">bloc</a>(float origine_x, float origine_y, float Longeur, float Hauteur)</td><td class="entry"><a class="el" href="structbloc.html">bloc</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structbloc.html#a51aa6ddde5ddfec73ab1ac6004a1e09c">estToucher</a>(circle const &amp;balle)</td><td class="entry"><a class="el" href="structbloc.html">bloc</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>H</b> (defined in <a class="el" href="structbloc.html">bloc</a>)</td><td class="entry"><a class="el" href="structbloc.html">bloc</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structbloc.html#a2fc10cb754a223b8b3d5bc73cddc7696">haut_gauche</a></td><td class="entry"><a class="el" href="structbloc.html">bloc</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="structbloc.html#a952b25540dde128110d4c1046656cb5e">L</a></td><td class="entry"><a class="el" href="structbloc.html">bloc</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="structbloc.html#a731b8b1d5fe6c1cf9e0edcc5c5cccc1b">operator==</a>(bloc const &amp;A)</td><td class="entry"><a class="el" href="structbloc.html">bloc</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>rectangle</b> (defined in <a class="el" href="structbloc.html">bloc</a>)</td><td class="entry"><a class="el" href="structbloc.html">bloc</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>taille</b> (defined in <a class="el" href="structbloc.html">bloc</a>)</td><td class="entry"><a class="el" href="structbloc.html">bloc</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

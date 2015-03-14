@@ -21,7 +21,8 @@ render_area::render_area(QWidget *parent)
       is_sphere_selected(false),
       draw_circle(true),
       timer(),
-      time()
+      time()/*,
+      targets(20,3,parent->size())*/
 {
     setBackgroundRole(QPalette::Base);
     setAutoFillBackground(true);
@@ -36,7 +37,7 @@ render_area::~render_area()
 
 
 
-void render_area::paintEvent(QPaintEvent*)
+void render_area::paintEvent(QPaintEvent* event)
 {
     QPainter painter(this);
     painter.setRenderHint(QPainter::Antialiasing, true);
@@ -57,7 +58,18 @@ void render_area::paintEvent(QPaintEvent*)
         vec2 const& p=circ.center;
         float const r=circ.radius;
         painter.drawEllipse(p.x-r,p.y-r,2*r,2*r);
-    }
+    }/*
+    for(auto it=targets.briques.begin();it!=targets.briques.end();it++){
+        bloc temp=*it;
+        try{
+        painter.drawRect(temp.rectangle);
+        }
+        catch(std::exception const& e)
+        {
+            std::cout<<"erreur lors dessin du rectangle"<<std::endl;
+        }
+}*/
+
 }
 
 

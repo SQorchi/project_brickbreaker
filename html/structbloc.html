@@ -37,6 +37,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -70,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -97,11 +98,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a2a5a4e418a9decebe5b7f30df71af385"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbloc.html#a2a5a4e418a9decebe5b7f30df71af385">bloc</a> (<a class="el" href="structvec2.html">vec2</a> origine, float Longeur, float Hauteur)</td></tr>
-<tr class="memdesc:a2a5a4e418a9decebe5b7f30df71af385"><td class="mdescLeft">&#160;</td><td class="mdescRight">bloc  <a href="#a2a5a4e418a9decebe5b7f30df71af385">More...</a><br/></td></tr>
-<tr class="separator:a2a5a4e418a9decebe5b7f30df71af385"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a022f138ba1573e51ea489e9d2d9343af"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbloc.html#a022f138ba1573e51ea489e9d2d9343af">bloc</a> (float origine_x, float origine_y, float Longeur, float Hauteur)</td></tr>
+<tr class="memdesc:a022f138ba1573e51ea489e9d2d9343af"><td class="mdescLeft">&#160;</td><td class="mdescRight">bloc  <a href="#a022f138ba1573e51ea489e9d2d9343af">More...</a><br/></td></tr>
+<tr class="separator:a022f138ba1573e51ea489e9d2d9343af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a51aa6ddde5ddfec73ab1ac6004a1e09c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbloc.html#a51aa6ddde5ddfec73ab1ac6004a1e09c">estToucher</a> (<a class="el" href="structcircle.html">circle</a> const &amp;balle)</td></tr>
-<tr class="memdesc:a51aa6ddde5ddfec73ab1ac6004a1e09c"><td class="mdescLeft">&#160;</td><td class="mdescRight">estToucher /** *  <a href="#a51aa6ddde5ddfec73ab1ac6004a1e09c">More...</a><br/></td></tr>
+<tr class="memdesc:a51aa6ddde5ddfec73ab1ac6004a1e09c"><td class="mdescLeft">&#160;</td><td class="mdescRight">estToucher  <a href="#a51aa6ddde5ddfec73ab1ac6004a1e09c">More...</a><br/></td></tr>
 <tr class="separator:a51aa6ddde5ddfec73ab1ac6004a1e09c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a731b8b1d5fe6c1cf9e0edcc5c5cccc1b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbloc.html#a731b8b1d5fe6c1cf9e0edcc5c5cccc1b">operator==</a> (<a class="el" href="structbloc.html">bloc</a> const &amp;A)</td></tr>
 <tr class="memdesc:a731b8b1d5fe6c1cf9e0edcc5c5cccc1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">operator ==  <a href="#a731b8b1d5fe6c1cf9e0edcc5c5cccc1b">More...</a><br/></td></tr>
@@ -109,26 +110,38 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a66f43d85d906eae25ff2bd055704ec76"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structvec2.html">vec2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbloc.html#a66f43d85d906eae25ff2bd055704ec76">bas_gauche</a></td></tr>
-<tr class="separator:a66f43d85d906eae25ff2bd055704ec76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fc10cb754a223b8b3d5bc73cddc7696"><td class="memItemLeft" align="right" valign="top">QPointF&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbloc.html#a2fc10cb754a223b8b3d5bc73cddc7696">haut_gauche</a></td></tr>
+<tr class="separator:a2fc10cb754a223b8b3d5bc73cddc7696"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a952b25540dde128110d4c1046656cb5e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbloc.html#a952b25540dde128110d4c1046656cb5e">L</a></td></tr>
 <tr class="separator:a952b25540dde128110d4c1046656cb5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59981ef09d24dcf015f480c3e4318eef"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a59981ef09d24dcf015f480c3e4318eef"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>H</b></td></tr>
 <tr class="separator:a59981ef09d24dcf015f480c3e4318eef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5544a11010c7abf27df801f7b7551072"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5544a11010c7abf27df801f7b7551072"></a>
+QSizeF&#160;</td><td class="memItemRight" valign="bottom"><b>taille</b></td></tr>
+<tr class="separator:a5544a11010c7abf27df801f7b7551072"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca18e24edbaf1c79d5d04986afb7e3e8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aca18e24edbaf1c79d5d04986afb7e3e8"></a>
+QRectF&#160;</td><td class="memItemRight" valign="bottom"><b>rectangle</b></td></tr>
+<tr class="separator:aca18e24edbaf1c79d5d04986afb7e3e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The bloc struct. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a2a5a4e418a9decebe5b7f30df71af385"></a>
+<a class="anchor" id="a022f138ba1573e51ea489e9d2d9343af"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">bloc::bloc </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structvec2.html">vec2</a>&#160;</td>
-          <td class="paramname"><em>origine</em>, </td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>origine_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>origine_y</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -153,9 +166,10 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>H</b></td></tr>
 <p>bloc </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">origine</td><td></td></tr>
+    <tr><td class="paramname">origine_x</td><td></td></tr>
+    <tr><td class="paramname">origine_y</td><td></td></tr>
     <tr><td class="paramname">Longeur</td><td></td></tr>
-    <tr><td class="paramname">Hauteur</td><td>Constructeur d'un bloc </td></tr>
+    <tr><td class="paramname">Hauteur</td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -177,24 +191,22 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>H</b></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>estToucher /** * </p>
-<p><a class="el" href="structbloc.html#a51aa6ddde5ddfec73ab1ac6004a1e09c" title="estToucher /** * ">bloc::estToucher</a> /** *</p>
-<p>/** * </p>
+<p>estToucher </p>
+<p><a class="el" href="structbloc.html#a51aa6ddde5ddfec73ab1ac6004a1e09c" title="estToucher ">bloc::estToucher</a></p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">balle</td><td>/** * </td></tr>
+    <tr><td class="paramname">balle</td><td></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>/**</dd></dl>
-<p>/** * </p>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">balle</td><td>/** * </td></tr>
+    <tr><td class="paramname">balle</td><td></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>permet de determiné si le bloc a été toucher par la balle /** </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>permet de determiné si le bloc a été toucher par la balle </dd></dl>
 
 </div>
 </div>
@@ -224,16 +236,16 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>H</b></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="a66f43d85d906eae25ff2bd055704ec76"></a>
+<a class="anchor" id="a2fc10cb754a223b8b3d5bc73cddc7696"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structvec2.html">vec2</a> bloc::bas_gauche</td>
+          <td class="memname">QPointF bloc::haut_gauche</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Origine du bloc (en bas à gauche) </p>
+<p>Origine du bloc (en haut à gauche) </p>
 
 </div>
 </div>

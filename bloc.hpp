@@ -13,10 +13,10 @@ struct bloc
     bloc();
     /**
      * @brief bloc
-     * @param origine
+     * @param origine_x
+     * @param origine_y
      * @param Longeur
      * @param Hauteur
-     * Constructeur d'un bloc
      */
     bloc(float origine_x,float origine_y,float Longeur,float Hauteur);
     /** Origine du bloc (en haut à gauche)*/

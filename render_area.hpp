@@ -4,7 +4,7 @@
 #define RENDER_AREA_HPP
 
 #include "circle.hpp"
-
+#include "cibles.hpp"
 #include <QWidget>
 #include <QTimer>
 #include <QTime>
@@ -76,6 +76,8 @@ private: //attributes
     vec2 speed;
     /** The time integration step */
     float dt;
+    /** The targets*/
+    cibles targets;
 
     /** A vector of previous position when the circle is grabbed */
     std::list<vec2> stored_motion;

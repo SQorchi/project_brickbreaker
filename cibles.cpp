@@ -4,12 +4,12 @@ cibles::cibles()
 {
 }
 /** Constructeur permettant de genérer une matrice de N element qui remplis toute la partie haute de l'élément*/
-cibles::cibles(int N, int nombreLignes,QWidget zone_de_jeu):nombreCibles(N)
+cibles::cibles(int N, int nombreLignes, const QSizeF &taille):nombreCibles(N)
 {
     int nombreElementsLigne=int(N/nombreLignes);
     float H=0.5/nombreLignes;
     float L=1/nombreElementsLigne;
-    float basBlocCible=zone_de_jeu.size().height()/2;
+    float basBlocCible=taille.height()/2;
     for(int j=0;j<nombreLignes;j++){
         for(int i=0;i<nombreElementsLigne;i++)
         {
