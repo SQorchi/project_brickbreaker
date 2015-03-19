@@ -18,7 +18,7 @@ struct cibles
      * @param nombreLignes
      * @param zone_de_jeu
      */
-    cibles(int N, int nombreLignes, QSizeF const& taille);
+    cibles(int N, int nombreLignes);
     /**
      * @brief nombreCibles
      */

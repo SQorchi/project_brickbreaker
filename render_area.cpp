@@ -4,15 +4,18 @@
 #include <QPainter>
 #include <QMouseEvent>
 #include <QLabel>
-
+#include <QRectF>
 #include <iostream>
+#include<QColor>
+#include <ctime>
+
 
 render_area::render_area(QWidget *parent)
     :QWidget(parent),
       damping(0.05),
       bounce_coeff(1.0),
       bounce_number(nullptr),
-      circ({200,150},25),
+      circ({200,150},5),
       speed(0.0f,0.0f),
       dt(1/5.0f),
       stored_motion(),
@@ -21,8 +24,9 @@ render_area::render_area(QWidget *parent)
       is_sphere_selected(false),
       draw_circle(true),
       timer(),
-      time()/*,
-      targets(20,3,parent->size())*/
+      time(),
+      targets(80,4),
+      palet(325,275,100,25,10,10)
 {
     setBackgroundRole(QPalette::Base);
     setAutoFillBackground(true);
@@ -30,6 +34,7 @@ render_area::render_area(QWidget *parent)
     //timer calling the function update_timer periodicaly
     connect(&timer, SIGNAL(timeout()), this, SLOT(update_timer()));
     timer.start(30); //every 30ms
+    std::srand(std::time(0));
 }
 
 render_area::~render_area()
@@ -58,17 +63,42 @@ void render_area::paintEvent(QPaintEvent* event)
         vec2 const& p=circ.center;
         float const r=circ.radius;
         painter.drawEllipse(p.x-r,p.y-r,2*r,2*r);
-    }/*
-    for(auto it=targets.briques.begin();it!=targets.briques.end();it++){
-        bloc temp=*it;
+    }
+    auto itsup=targets.briques.begin();
+    int modif=0;
+    for(auto it=targets.briques.begin();it!=targets.briques.end() ;it++){
+
+        bloc temp =*it;
         try{
-        painter.drawRect(temp.rectangle);
+            brush.setColor(temp.couleur);
+            painter.setBrush(brush);
+            painter.drawRect(temp.rectangle);
+            brush.setColor(Qt::gray);
+            painter.setBrush(brush);
+            if (temp.estToucher(circ)){
+                itsup=it;
+                modif=1;
+                std::cout<<"la brique est toucher"<<std::endl;
+            }
         }
         catch(std::exception const& e)
         {
             std::cout<<"erreur lors dessin du rectangle"<<std::endl;
         }
-}*/
+
+}
+
+    if(modif==1){
+        targets.briques.erase(itsup);
+        speed*=-1.002;
+        modif=0;
+    }
+    painter.drawRoundedRect(palet.rectangle,palet.angle_x,palet.angle_y);
+    if(palet.rectangle.contains({circ.getCoord().x,circ.getCoord().y}))
+    {
+        speed*=-1.02;
+    }
+
 
 }
 
@@ -97,21 +127,33 @@ void render_area::mousePressEvent(QMouseEvent *event)
 
 void render_area::mouseMoveEvent(QMouseEvent *event)
 {
-    if(is_sphere_selected)
-    {
-        //compute the current translation of the mouse
-        vec2 const click=vec2(event->x(),event->y());
-        vec2 const translate=click-click_previous;
+//    if(is_sphere_selected)
+//    {
+//        //compute the current translation of the mouse
+//        vec2 const click=vec2(event->x(),event->y());
+//        vec2 const translate=click-click_previous;
 
-        //translate the center of the circle
-        circ.center+=translate;
+//        //translate the center of the circle
+//        circ.center+=translate;
 
-        //store previous values
-        click_previous=click;
-        store_values(click);
+//        //store previous values
+//        click_previous=click;
+//        store_values(click);
+//    }
+//    else
+//    {
+//        vec2 const click=vec2(event->x(),event->y());
+//        vec2 const translate=click-click_previous;
+
+//        palet.haut_gauche.setX(palet.haut_gauche.x()+translate.x);
+//        click_previous=click;
+//        store_values(click);
+    std::cout<<"on passe la "<<std::endl;
+    setMouseTracking(1);
+    if(event->x()>48&&event->x()<708){
+        palet.rectangle.moveCenter({event->x(),288});
+        repaint();
     }
-
-    repaint();
 }
 
 void render_area::store_values(vec2 const& click)

@@ -5,6 +5,7 @@
 #include<QSizeF>
 #include<QPointF>
 #include<QRectF>
+#include<QColor>
 /**
  * @brief The bloc struct
  */
@@ -25,6 +26,8 @@ struct bloc
     float L,H;
     QSizeF taille;
     QRectF rectangle;
+    QColor couleur;
+    void change_origine_x(float x);
 
     /**
 @brief estToucher

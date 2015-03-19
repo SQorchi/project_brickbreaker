@@ -4,22 +4,18 @@ cibles::cibles()
 {
 }
 /** Constructeur permettant de genérer une matrice de N element qui remplis toute la partie haute de l'élément*/
-cibles::cibles(int N, int nombreLignes, const QSizeF &taille):nombreCibles(N)
+cibles::cibles(int N, int nombreLignes):nombreCibles(N)
 {
-    int nombreElementsLigne=int(N/nombreLignes);
-    float H=0.5/nombreLignes;
-    float L=1/nombreElementsLigne;
-    float basBlocCible=taille.height()/2;
+    int H=20;
+    int L=38;
     for(int j=0;j<nombreLignes;j++){
-        for(int i=0;i<nombreElementsLigne;i++)
-        {
-            //vec2 origine(0+i*L,basBlocCible+j*H);
-            float origine_x(0+i*L);
-            float origine_y(basBlocCible+j*H);
-            bloc temp(origine_x,origine_y,L,H);
+        for(int i=0;i<(int)nombreCibles/nombreLignes;i++){
+            bloc temp(0+i*L,j*H,L,H);
             this->briques.push_back(temp);
         }
+        std::cout<<"on change de ligne"<<std::endl;
     }
+    std::cout<<this->briques.size()<<std::endl;
 }
 void cibles::gestionCollision(const circle &balle)
 {

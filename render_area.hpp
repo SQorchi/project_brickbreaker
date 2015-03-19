@@ -9,7 +9,7 @@
 #include <QTimer>
 #include <QTime>
 #include <list>
-
+#include "raquette.hpp"
 //forward declaration of QLabel
 class QLabel;
 
@@ -78,6 +78,8 @@ private: //attributes
     float dt;
     /** The targets*/
     cibles targets;
+    /** Le palet*/
+    raquette palet;
 
     /** A vector of previous position when the circle is grabbed */
     std::list<vec2> stored_motion;
