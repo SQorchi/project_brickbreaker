@@ -16,46 +16,14 @@ bloc::bloc(float origine_x, float origine_y, float Longeur, float Hauteur):H(Hau
 bool bloc::estToucher(const circle &balle)
 {
     bool retour=false;
-    float i=0;
-    float increment=0.01;
-    do{
-        vec2 temp(this->haut_gauche.x(),this->haut_gauche.y()+i);
-            if(point_inside_circle(temp,balle))
-            {
-                retour=true;
-            }
-            i+=increment;
-    }while(i<this->rectangle.height());
-    i=0;
-    do{
-        vec2 temp(this->haut_gauche.x()+i,this->haut_gauche.y());
-            if(point_inside_circle(temp,balle))
-            {
-                retour=true;
-            }
-            i+=increment;
-    }while(i<this->rectangle.width());
 
-    i=0;
-    do{
-        vec2 temp(this->haut_gauche.x()+this->rectangle.width(),this->haut_gauche.y()+i);
-            if(point_inside_circle(temp,balle))
-            {
-                retour=true;
-            }
-            i+=increment;
-    }while(i<this->rectangle.height());
-
-    i=0;
-    do{
-        vec2 temp(this->haut_gauche.x()+i,this->haut_gauche.y()+this->rectangle.height());
-            if(point_inside_circle(temp,balle))
-            {
-                retour=true;
-            }
-            i+=increment;
-    }while(i<this->rectangle.width());
-
+    if(balle.center.y-this->haut_gauche.y()<=this->rectangle.height()+balle.radius&&balle.center.y-this->haut_gauche.y()>=balle.radius){
+        if(balle.center.x-this->haut_gauche.x()<=this->rectangle.width()+balle.radius&&balle.center.x-this->haut_gauche.x()>=balle.radius){
+            retour=true;
+        }
+    }
+    if(this->rectangle.contains(balle.center.x,balle.center.y))
+        retour=true;
     return retour;
 }
 bool bloc::operator ==(bloc const& A)

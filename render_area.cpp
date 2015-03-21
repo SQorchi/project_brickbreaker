@@ -78,7 +78,6 @@ void render_area::paintEvent(QPaintEvent* event)
             if (temp.estToucher(circ)){
                 itsup=it;
                 modif=1;
-                std::cout<<"la brique est toucher"<<std::endl;
             }
         }
         catch(std::exception const& e)
@@ -90,16 +89,26 @@ void render_area::paintEvent(QPaintEvent* event)
 
     if(modif==1){
         targets.briques.erase(itsup);
-        speed*=-1.02;
+        if(norm(speed)<55)
+            speed*=-1.000;
+        else
+            speed*=-1;
         modif=0;
     }
-    painter.drawRoundedRect(palet.rectangle,palet.angle_x,palet.angle_y);
-    if(palet.rectangle.contains({circ.getCoord().x,circ.getCoord().y})){
-    //if(palet.estToucher(circ))
-        std::cout<<"le palet est toucher"<<std::endl;
-        speed*=-1.02;
-        int position=(palet.haut_gauche.x()+palet.L)/2-circ.center.x;
-        circ.center.x+=(position/5);
+    painter.drawRect(palet.rectangle);
+    //if(palet.rectangle.contains({circ.getCoord().x,circ.getCoord().y})){
+    if(palet.estToucher(circ)){
+        if(norm(speed)<55)
+            speed.y*=-1.000;
+        else
+            speed.y*=-1.0;
+        int millieu=(palet.haut_gauche.x()+palet.L/2);
+        if(circ.center.x<millieu)
+            speed.x-=5;
+        else
+            speed.x+=5;
+//        std::cout<<"la position est "<<position<<std::endl;
+//        speed.x+=(position/10);
     }
 
 
@@ -130,31 +139,11 @@ void render_area::mousePressEvent(QMouseEvent *event)
 
 void render_area::mouseMoveEvent(QMouseEvent *event)
 {
-//    if(is_sphere_selected)
-//    {
-//        //compute the current translation of the mouse
-//        vec2 const click=vec2(event->x(),event->y());
-//        vec2 const translate=click-click_previous;
-
-//        //translate the center of the circle
-//        circ.center+=translate;
-
-//        //store previous values
-//        click_previous=click;
-//        store_values(click);
-//    }
-//    else
-//    {
-//        vec2 const click=vec2(event->x(),event->y());
-//        vec2 const translate=click-click_previous;
-
-//        palet.haut_gauche.setX(palet.haut_gauche.x()+translate.x);
-//        click_previous=click;
-//        store_values(click);
-    std::cout<<"on passe la "<<std::endl;
     setMouseTracking(1);
     if(event->x()>48&&event->x()<708){
-        palet.rectangle.moveCenter({event->x(),288});
+        vec2 nouvelle_position(event->x(),275);
+//        palet.rectangle.moveCenter({event->x(),288});
+        palet.change_haut_gauche(nouvelle_position);
         repaint();
     }
 }
@@ -206,7 +195,7 @@ void render_area::update_timer()
 void render_area::numerical_integration()
 {
     //numerical integration using Forward Euler method
-    vec2 const gravity={0.0f,9.81f};
+    vec2 const gravity={0.0f,0.0f};
     vec2& p=circ.center;
 
     speed=speed+dt*gravity;  //integrate speed
@@ -237,7 +226,8 @@ vec2 render_area::collision_handling(vec2& p)
     if(p.y+r>h)
     {
         p.y=h-r;
-        new_speed.y *= 0;
+        new_speed.y = 0;
+        new_speed.x=0;
         collision=true;
         game_over=true;
     }
@@ -245,7 +235,7 @@ vec2 render_area::collision_handling(vec2& p)
     if(p.x-r<0)
     {
         p.x=r;
-        new_speed.x *= -1.002;
+        new_speed.x *= -1.00;
         collision=true;
         collision_wall=true;
     }
@@ -253,7 +243,7 @@ vec2 render_area::collision_handling(vec2& p)
     if(p.x+r>w)
     {
         p.x=w-r;
-        new_speed.x *= -1.002;
+        new_speed.x *= -1.00;
         collision=true;
         collision_wall=true;
     }
@@ -261,7 +251,7 @@ vec2 render_area::collision_handling(vec2& p)
     if(p.y-r<0)
     {
         p.y=r;
-        new_speed.y *= -1.002;
+        new_speed.y *= -1.00;
         collision=true;
         collision_wall=true;
     }
@@ -274,8 +264,11 @@ vec2 render_area::collision_handling(vec2& p)
     {
         //increase the information of the number of bounces
         int bounce_nbr=bounce_number->text().toInt();
-        bounce_nbr++;
+        draw_circle=false;
         bounce_number->setText("Game Over");
+        circ.center.x=0;
+        circ.center.y=100;
+
     }
 
 
