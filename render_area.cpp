@@ -12,11 +12,11 @@
 
 render_area::render_area(QWidget *parent)
     :QWidget(parent),
-      damping(0.05),
-      bounce_coeff(1.0),
+      damping(0.0f),
+      bounce_coeff(1.0f),
       bounce_number(nullptr),
-      circ({200,150},5),
-      speed(0.0f,0.0f),
+      circ({350,150},5),
+      speed(1.0f,-50.0f),
       dt(1/5.0f),
       stored_motion(),
       stored_time(),
@@ -90,13 +90,16 @@ void render_area::paintEvent(QPaintEvent* event)
 
     if(modif==1){
         targets.briques.erase(itsup);
-        speed*=-1.002;
+        speed*=-1.02;
         modif=0;
     }
     painter.drawRoundedRect(palet.rectangle,palet.angle_x,palet.angle_y);
-    if(palet.rectangle.contains({circ.getCoord().x,circ.getCoord().y}))
-    {
+    if(palet.rectangle.contains({circ.getCoord().x,circ.getCoord().y})){
+    //if(palet.estToucher(circ))
+        std::cout<<"le palet est toucher"<<std::endl;
         speed*=-1.02;
+        int position=(palet.haut_gauche.x()+palet.L)/2-circ.center.x;
+        circ.center.x+=(position/5);
     }
 
 
@@ -228,19 +231,21 @@ vec2 render_area::collision_handling(vec2& p)
     //special condition in cases of collision
     bool collision=false;
     bool collision_wall=false;
+    bool game_over=false;
 
     //collision with the ground
     if(p.y+r>h)
     {
         p.y=h-r;
-        new_speed.y *= -1;
+        new_speed.y *= 0;
         collision=true;
+        game_over=true;
     }
     //collision with the left wall
     if(p.x-r<0)
     {
         p.x=r;
-        new_speed.x *= -1;
+        new_speed.x *= -1.002;
         collision=true;
         collision_wall=true;
     }
@@ -248,7 +253,7 @@ vec2 render_area::collision_handling(vec2& p)
     if(p.x+r>w)
     {
         p.x=w-r;
-        new_speed.x *= -1;
+        new_speed.x *= -1.002;
         collision=true;
         collision_wall=true;
     }
@@ -256,21 +261,21 @@ vec2 render_area::collision_handling(vec2& p)
     if(p.y-r<0)
     {
         p.y=r;
-        new_speed.y *= -1;
+        new_speed.y *= -1.002;
         collision=true;
         collision_wall=true;
     }
 
     //decrease speed with respect to the bouncing coefficient
-    if(collision)
+ if(collision)
         new_speed *= bounce_coeff;
 
-    if(collision_wall && bounce_number!=nullptr)
+    if(game_over==true)
     {
         //increase the information of the number of bounces
         int bounce_nbr=bounce_number->text().toInt();
         bounce_nbr++;
-        bounce_number->setText(QString::number(bounce_nbr));
+        bounce_number->setText("Game Over");
     }
 
 
