@@ -268,7 +268,6 @@ vec2 render_area::collision_handling(vec2& p)
         bounce_number->setText("Game Over");
         circ.center.x=0;
         circ.center.y=100;
-
     }
 
 
