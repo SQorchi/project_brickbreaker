@@ -90,27 +90,30 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include&lt;QSizeF&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include&lt;QPointF&gt;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include&lt;QRectF&gt;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="structbloc.html">   11</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structbloc.html">bloc</a></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="structbloc.html">bloc</a>();</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="structbloc.html">bloc</a>(<span class="keywordtype">float</span> origine_x,<span class="keywordtype">float</span> origine_y,<span class="keywordtype">float</span> Longeur,<span class="keywordtype">float</span> Hauteur);</div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="structbloc.html#a2fc10cb754a223b8b3d5bc73cddc7696">   23</a></span>&#160;    QPointF <a class="code" href="structbloc.html#a2fc10cb754a223b8b3d5bc73cddc7696">haut_gauche</a>;</div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="structbloc.html#a952b25540dde128110d4c1046656cb5e">   25</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="structbloc.html#a952b25540dde128110d4c1046656cb5e">L</a>,H;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    QSizeF taille;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    QRectF rectangle;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="structbloc.html#a51aa6ddde5ddfec73ab1ac6004a1e09c">estToucher</a>(<a class="code" href="structcircle.html">circle</a> <span class="keyword">const</span>&amp; balle);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="structbloc.html#a731b8b1d5fe6c1cf9e0edcc5c5cccc1b">operator ==</a>(<a class="code" href="structbloc.html">bloc</a> <span class="keyword">const</span>&amp; A);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;};</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#endif // BLOC_HPP</span></div>
-<div class="ttc" id="structbloc_html"><div class="ttname"><a href="structbloc.html">bloc</a></div><div class="ttdoc">The bloc struct. </div><div class="ttdef"><b>Definition:</b> bloc.hpp:11</div></div>
-<div class="ttc" id="structbloc_html_a2fc10cb754a223b8b3d5bc73cddc7696"><div class="ttname"><a href="structbloc.html#a2fc10cb754a223b8b3d5bc73cddc7696">bloc::haut_gauche</a></div><div class="ttdeci">QPointF haut_gauche</div><div class="ttdef"><b>Definition:</b> bloc.hpp:23</div></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include&lt;QColor&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="structbloc.html">   12</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structbloc.html">bloc</a></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="structbloc.html">bloc</a>();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="structbloc.html">bloc</a>(<span class="keywordtype">float</span> origine_x,<span class="keywordtype">float</span> origine_y,<span class="keywordtype">float</span> Longeur,<span class="keywordtype">float</span> Hauteur);</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="structbloc.html#a2fc10cb754a223b8b3d5bc73cddc7696">   24</a></span>&#160;    QPointF <a class="code" href="structbloc.html#a2fc10cb754a223b8b3d5bc73cddc7696">haut_gauche</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="structbloc.html#a952b25540dde128110d4c1046656cb5e">   26</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="structbloc.html#a952b25540dde128110d4c1046656cb5e">L</a>,H;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    QSizeF taille;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    QRectF rectangle;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    QColor couleur;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">void</span> change_origine_x(<span class="keywordtype">float</span> x);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="structbloc.html#a51aa6ddde5ddfec73ab1ac6004a1e09c">estToucher</a>(<a class="code" href="structcircle.html">circle</a> <span class="keyword">const</span>&amp; balle);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="structbloc.html#a731b8b1d5fe6c1cf9e0edcc5c5cccc1b">operator ==</a>(<a class="code" href="structbloc.html">bloc</a> <span class="keyword">const</span>&amp; A);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;};</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#endif // BLOC_HPP</span></div>
+<div class="ttc" id="structbloc_html"><div class="ttname"><a href="structbloc.html">bloc</a></div><div class="ttdoc">The bloc struct. </div><div class="ttdef"><b>Definition:</b> bloc.hpp:12</div></div>
+<div class="ttc" id="structbloc_html_a2fc10cb754a223b8b3d5bc73cddc7696"><div class="ttname"><a href="structbloc.html#a2fc10cb754a223b8b3d5bc73cddc7696">bloc::haut_gauche</a></div><div class="ttdeci">QPointF haut_gauche</div><div class="ttdef"><b>Definition:</b> bloc.hpp:24</div></div>
 <div class="ttc" id="structcircle_html"><div class="ttname"><a href="structcircle.html">circle</a></div><div class="ttdef"><b>Definition:</b> circle.hpp:13</div></div>
-<div class="ttc" id="structbloc_html_a51aa6ddde5ddfec73ab1ac6004a1e09c"><div class="ttname"><a href="structbloc.html#a51aa6ddde5ddfec73ab1ac6004a1e09c">bloc::estToucher</a></div><div class="ttdeci">bool estToucher(circle const &amp;balle)</div><div class="ttdoc">estToucher </div><div class="ttdef"><b>Definition:</b> bloc.cpp:15</div></div>
-<div class="ttc" id="structbloc_html_a731b8b1d5fe6c1cf9e0edcc5c5cccc1b"><div class="ttname"><a href="structbloc.html#a731b8b1d5fe6c1cf9e0edcc5c5cccc1b">bloc::operator==</a></div><div class="ttdeci">bool operator==(bloc const &amp;A)</div><div class="ttdoc">operator == </div><div class="ttdef"><b>Definition:</b> bloc.cpp:32</div></div>
-<div class="ttc" id="structbloc_html_a952b25540dde128110d4c1046656cb5e"><div class="ttname"><a href="structbloc.html#a952b25540dde128110d4c1046656cb5e">bloc::L</a></div><div class="ttdeci">float L</div><div class="ttdef"><b>Definition:</b> bloc.hpp:25</div></div>
+<div class="ttc" id="structbloc_html_a51aa6ddde5ddfec73ab1ac6004a1e09c"><div class="ttname"><a href="structbloc.html#a51aa6ddde5ddfec73ab1ac6004a1e09c">bloc::estToucher</a></div><div class="ttdeci">bool estToucher(circle const &amp;balle)</div><div class="ttdoc">estToucher </div><div class="ttdef"><b>Definition:</b> bloc.cpp:16</div></div>
+<div class="ttc" id="structbloc_html_a731b8b1d5fe6c1cf9e0edcc5c5cccc1b"><div class="ttname"><a href="structbloc.html#a731b8b1d5fe6c1cf9e0edcc5c5cccc1b">bloc::operator==</a></div><div class="ttdeci">bool operator==(bloc const &amp;A)</div><div class="ttdoc">operator == </div><div class="ttdef"><b>Definition:</b> bloc.cpp:29</div></div>
+<div class="ttc" id="structbloc_html_a952b25540dde128110d4c1046656cb5e"><div class="ttname"><a href="structbloc.html#a952b25540dde128110d4c1046656cb5e">bloc::L</a></div><div class="ttdeci">float L</div><div class="ttdef"><b>Definition:</b> bloc.hpp:26</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

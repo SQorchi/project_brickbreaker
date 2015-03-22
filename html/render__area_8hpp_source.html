@@ -89,12 +89,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define RENDER_AREA_HPP</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;circle.hpp&quot;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;cibles.hpp&quot;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;QWidget&gt;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;QTimer&gt;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;QTime&gt;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;list&gt;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;raquette.hpp&quot;</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">//forward declaration of QLabel</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">class </span>QLabel;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
@@ -143,32 +143,36 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <a class="code" href="structcircle.html">circle</a> circ;</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <a class="code" href="structvec2.html">vec2</a> speed;</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">float</span> dt;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    std::list&lt;vec2&gt; stored_motion;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    std::list&lt;int&gt; stored_time;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <a class="code" href="structvec2.html">vec2</a> click_previous;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordtype">bool</span> is_sphere_selected;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordtype">bool</span> draw_circle;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <a class="code" href="structcibles.html">cibles</a> targets;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <a class="code" href="classraquette.html">raquette</a> palet;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    std::list&lt;vec2&gt; stored_motion;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    std::list&lt;int&gt; stored_time;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <a class="code" href="structvec2.html">vec2</a> click_previous;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">bool</span> is_sphere_selected;</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    QTimer timer;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    QTime time;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;};</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordtype">bool</span> draw_circle;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    QTimer timer;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    QTime time;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;};</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="structcibles_html"><div class="ttname"><a href="structcibles.html">cibles</a></div><div class="ttdoc">The cibles struct. </div><div class="ttdef"><b>Definition:</b> cibles.hpp:9</div></div>
 <div class="ttc" id="structcircle_html"><div class="ttname"><a href="structcircle.html">circle</a></div><div class="ttdef"><b>Definition:</b> circle.hpp:13</div></div>
 <div class="ttc" id="structvec2_html"><div class="ttname"><a href="structvec2.html">vec2</a></div><div class="ttdef"><b>Definition:</b> vec2.hpp:11</div></div>
-<div class="ttc" id="classrender__area_html_a02d5dad4e73fe27226ca173d6fe6cbaf"><div class="ttname"><a href="classrender__area.html#a02d5dad4e73fe27226ca173d6fe6cbaf">render_area::set_damping</a></div><div class="ttdeci">void set_damping(float damping)</div><div class="ttdef"><b>Definition:</b> render_area.cpp:233</div></div>
+<div class="ttc" id="classrender__area_html_a02d5dad4e73fe27226ca173d6fe6cbaf"><div class="ttname"><a href="classrender__area.html#a02d5dad4e73fe27226ca173d6fe6cbaf">render_area::set_damping</a></div><div class="ttdeci">void set_damping(float damping)</div><div class="ttdef"><b>Definition:</b> render_area.cpp:284</div></div>
 <div class="ttc" id="classrender__area_html"><div class="ttname"><a href="classrender__area.html">render_area</a></div><div class="ttdef"><b>Definition:</b> render_area.hpp:18</div></div>
-<div class="ttc" id="classrender__area_html_a3e0c5624174bac8f62fb07fff6258a0b"><div class="ttname"><a href="classrender__area.html#a3e0c5624174bac8f62fb07fff6258a0b">render_area::paintEvent</a></div><div class="ttdeci">void paintEvent(QPaintEvent *event)</div><div class="ttdef"><b>Definition:</b> render_area.cpp:39</div></div>
-<div class="ttc" id="classrender__area_html_a1a04cb64fc5e810d4c4b6d537e493c9c"><div class="ttname"><a href="classrender__area.html#a1a04cb64fc5e810d4c4b6d537e493c9c">render_area::setup_bounce_number</a></div><div class="ttdeci">void setup_bounce_number(QLabel *bounce_number_param)</div><div class="ttdef"><b>Definition:</b> render_area.cpp:241</div></div>
-<div class="ttc" id="classrender__area_html_a886281d1f08072563562c943493c0d5a"><div class="ttname"><a href="classrender__area.html#a886281d1f08072563562c943493c0d5a">render_area::mouseReleaseEvent</a></div><div class="ttdeci">void mouseReleaseEvent(QMouseEvent *event)</div><div class="ttdef"><b>Definition:</b> render_area.cpp:117</div></div>
-<div class="ttc" id="classrender__area_html_abf4d8df609e70aa6f523836ae00dde5d"><div class="ttname"><a href="classrender__area.html#abf4d8df609e70aa6f523836ae00dde5d">render_area::mousePressEvent</a></div><div class="ttdeci">void mousePressEvent(QMouseEvent *event)</div><div class="ttdef"><b>Definition:</b> render_area.cpp:66</div></div>
-<div class="ttc" id="classrender__area_html_abfb41f3e1ea6655e643c35decf895574"><div class="ttname"><a href="classrender__area.html#abfb41f3e1ea6655e643c35decf895574">render_area::set_bounce_coeff</a></div><div class="ttdeci">void set_bounce_coeff(float bounce_coeff_value)</div><div class="ttdef"><b>Definition:</b> render_area.cpp:237</div></div>
-<div class="ttc" id="classrender__area_html_a3a5d00ec1ab31659f8b5d09fbd4ac910"><div class="ttname"><a href="classrender__area.html#a3a5d00ec1ab31659f8b5d09fbd4ac910">render_area::change_draw_circle_state</a></div><div class="ttdeci">void change_draw_circle_state()</div><div class="ttdef"><b>Definition:</b> render_area.cpp:228</div></div>
-<div class="ttc" id="classrender__area_html_a2552b2a7f1aa521bc8ded21e5bb6e2a7"><div class="ttname"><a href="classrender__area.html#a2552b2a7f1aa521bc8ded21e5bb6e2a7">render_area::mouseMoveEvent</a></div><div class="ttdeci">void mouseMoveEvent(QMouseEvent *event)</div><div class="ttdef"><b>Definition:</b> render_area.cpp:86</div></div>
+<div class="ttc" id="classrender__area_html_a3e0c5624174bac8f62fb07fff6258a0b"><div class="ttname"><a href="classrender__area.html#a3e0c5624174bac8f62fb07fff6258a0b">render_area::paintEvent</a></div><div class="ttdeci">void paintEvent(QPaintEvent *event)</div><div class="ttdef"><b>Definition:</b> render_area.cpp:45</div></div>
+<div class="ttc" id="classrender__area_html_a1a04cb64fc5e810d4c4b6d537e493c9c"><div class="ttname"><a href="classrender__area.html#a1a04cb64fc5e810d4c4b6d537e493c9c">render_area::setup_bounce_number</a></div><div class="ttdeci">void setup_bounce_number(QLabel *bounce_number_param)</div><div class="ttdef"><b>Definition:</b> render_area.cpp:292</div></div>
+<div class="ttc" id="classrender__area_html_a886281d1f08072563562c943493c0d5a"><div class="ttname"><a href="classrender__area.html#a886281d1f08072563562c943493c0d5a">render_area::mouseReleaseEvent</a></div><div class="ttdeci">void mouseReleaseEvent(QMouseEvent *event)</div><div class="ttdef"><b>Definition:</b> render_area.cpp:163</div></div>
+<div class="ttc" id="classraquette_html"><div class="ttname"><a href="classraquette.html">raquette</a></div><div class="ttdef"><b>Definition:</b> raquette.hpp:4</div></div>
+<div class="ttc" id="classrender__area_html_abf4d8df609e70aa6f523836ae00dde5d"><div class="ttname"><a href="classrender__area.html#abf4d8df609e70aa6f523836ae00dde5d">render_area::mousePressEvent</a></div><div class="ttdeci">void mousePressEvent(QMouseEvent *event)</div><div class="ttdef"><b>Definition:</b> render_area.cpp:120</div></div>
+<div class="ttc" id="classrender__area_html_abfb41f3e1ea6655e643c35decf895574"><div class="ttname"><a href="classrender__area.html#abfb41f3e1ea6655e643c35decf895574">render_area::set_bounce_coeff</a></div><div class="ttdeci">void set_bounce_coeff(float bounce_coeff_value)</div><div class="ttdef"><b>Definition:</b> render_area.cpp:288</div></div>
+<div class="ttc" id="classrender__area_html_a3a5d00ec1ab31659f8b5d09fbd4ac910"><div class="ttname"><a href="classrender__area.html#a3a5d00ec1ab31659f8b5d09fbd4ac910">render_area::change_draw_circle_state</a></div><div class="ttdeci">void change_draw_circle_state()</div><div class="ttdef"><b>Definition:</b> render_area.cpp:279</div></div>
+<div class="ttc" id="classrender__area_html_a2552b2a7f1aa521bc8ded21e5bb6e2a7"><div class="ttname"><a href="classrender__area.html#a2552b2a7f1aa521bc8ded21e5bb6e2a7">render_area::mouseMoveEvent</a></div><div class="ttdeci">void mouseMoveEvent(QMouseEvent *event)</div><div class="ttdef"><b>Definition:</b> render_area.cpp:140</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

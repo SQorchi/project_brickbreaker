@@ -1,6 +1,6 @@
 var searchData=
 [
   ['change_5fdraw_5fcircle_5fstate',['change_draw_circle_state',['../classrender__area.html#a3a5d00ec1ab31659f8b5d09fbd4ac910',1,'render_area']]],
-  ['cibles',['cibles',['../structcibles.html#aff3b848ce81ad0ce76482844a6ad3ac1',1,'cibles::cibles()'],['../structcibles.html#a638f2d963ebfaf52e64608ed629311bc',1,'cibles::cibles(int N, int nombreLignes, QWidget zone_de_jeu)']]],
+  ['cibles',['cibles',['../structcibles.html#aff3b848ce81ad0ce76482844a6ad3ac1',1,'cibles::cibles()'],['../structcibles.html#ae0e206ba4f2a00b82d3a6cdf1bbe61ea',1,'cibles::cibles(int N, int nombreLignes)']]],
   ['circle',['circle',['../structcircle.html#a4e0786fc75051f3bbe5de2e08ef9712d',1,'circle::circle()'],['../structcircle.html#a13bd963deb70b1ef5e5747c3478ef551',1,'circle::circle(vec2 const &amp;center_param, float radius_center)']]]
 ];

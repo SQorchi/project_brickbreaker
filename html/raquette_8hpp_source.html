@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.5"/>
-<title>My Project: cibles.hpp Source File</title>
+<title>My Project: raquette.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -80,29 +80,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div class="header">
   <div class="headertitle">
-<div class="title">cibles.hpp</div>  </div>
+<div class="title">raquette.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef CIBLES_HPP</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define CIBLES_HPP</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef RAQUETTE_HPP</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define RAQUETTE_HPP</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include&quot;bloc.hpp&quot;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include&lt;list&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include&lt;QSizeF&gt;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="structcibles.html">    9</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structcibles.html">cibles</a></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="structcibles.html#aff3b848ce81ad0ce76482844a6ad3ac1">cibles</a>();</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="structcibles.html#aff3b848ce81ad0ce76482844a6ad3ac1">cibles</a>(<span class="keywordtype">int</span> N, <span class="keywordtype">int</span> nombreLignes);</div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="structcibles.html#a5882b203001202b7cf98bb57f54638d5">   25</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structcibles.html#a5882b203001202b7cf98bb57f54638d5">nombreCibles</a>;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    std::list&lt;bloc&gt; briques;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="structcibles.html#a361b3e39738fcc849de170d392a65b6c">gestionCollision</a>(<a class="code" href="structcircle.html">circle</a> <span class="keyword">const</span>&amp; balle);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;};</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#endif // CIBLES_HPP</span></div>
-<div class="ttc" id="structcibles_html"><div class="ttname"><a href="structcibles.html">cibles</a></div><div class="ttdoc">The cibles struct. </div><div class="ttdef"><b>Definition:</b> cibles.hpp:9</div></div>
-<div class="ttc" id="structcircle_html"><div class="ttname"><a href="structcircle.html">circle</a></div><div class="ttdef"><b>Definition:</b> circle.hpp:13</div></div>
-<div class="ttc" id="structcibles_html_a361b3e39738fcc849de170d392a65b6c"><div class="ttname"><a href="structcibles.html#a361b3e39738fcc849de170d392a65b6c">cibles::gestionCollision</a></div><div class="ttdeci">void gestionCollision(circle const &amp;balle)</div><div class="ttdoc">gestionCollision </div><div class="ttdef"><b>Definition:</b> cibles.cpp:20</div></div>
-<div class="ttc" id="structcibles_html_a5882b203001202b7cf98bb57f54638d5"><div class="ttname"><a href="structcibles.html#a5882b203001202b7cf98bb57f54638d5">cibles::nombreCibles</a></div><div class="ttdeci">int nombreCibles</div><div class="ttdoc">nombreCibles </div><div class="ttdef"><b>Definition:</b> cibles.hpp:25</div></div>
-<div class="ttc" id="structcibles_html_aff3b848ce81ad0ce76482844a6ad3ac1"><div class="ttname"><a href="structcibles.html#aff3b848ce81ad0ce76482844a6ad3ac1">cibles::cibles</a></div><div class="ttdeci">cibles()</div><div class="ttdoc">cibles </div><div class="ttdef"><b>Definition:</b> cibles.cpp:3</div></div>
+<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="classraquette.html">    4</a></span>&#160;<span class="keyword">class </span><a class="code" href="classraquette.html">raquette</a> : <span class="keyword">public</span> <a class="code" href="structbloc.html">bloc</a></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <a class="code" href="classraquette.html">raquette</a>(<span class="keywordtype">float</span> origine_x,<span class="keywordtype">float</span> origine_y,<span class="keywordtype">float</span> Longeur,<span class="keywordtype">float</span> Hauteur,<span class="keywordtype">float</span> r_x,<span class="keywordtype">float</span> r_y);</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keywordtype">float</span> angle_x;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keywordtype">float</span> angle_y;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordtype">void</span> change_haut_gauche(<a class="code" href="structvec2.html">vec2</a> <span class="keyword">const</span>&amp; nvl_posi);</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;};</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#endif // RAQUETTE_HPP</span></div>
+<div class="ttc" id="structbloc_html"><div class="ttname"><a href="structbloc.html">bloc</a></div><div class="ttdoc">The bloc struct. </div><div class="ttdef"><b>Definition:</b> bloc.hpp:12</div></div>
+<div class="ttc" id="structvec2_html"><div class="ttname"><a href="structvec2.html">vec2</a></div><div class="ttdef"><b>Definition:</b> vec2.hpp:11</div></div>
+<div class="ttc" id="classraquette_html"><div class="ttname"><a href="classraquette.html">raquette</a></div><div class="ttdef"><b>Definition:</b> raquette.hpp:4</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
